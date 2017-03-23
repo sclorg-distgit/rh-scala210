@@ -1,0 +1,2 @@
+%scl_scala rh-maven33
+%scl_prefix_scala %{scl_scala}-

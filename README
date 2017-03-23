@@ -1,0 +1,40 @@
+The %{scl_name} package provides Scala 2.10.6 delivered as a Software
+Collection. For more information about Software Collections, see the
+scl(1) man page.
+
+Installing the %{scl_name} Software Collection gets you Scala 2.10.6
+with all required dependencies, including the Java Runtime Environment.
+
+Usage: scl enable %{scl} 'scala'
+
+Software Collections allow you to build and execute applications which
+are not located in the file system root hierarchy but instead are stored in
+an alternative location. The location is %{_scl_root} in
+case of the %{scl_name} Software Collection.
+
+Scala is a general purpose programming language designed to express
+common programming patterns in a concise, elegant, and type-safe way.
+It smoothly integrates features of object-oriented and functional
+languages. It is also fully interoperable with Java.
+
+When you want to start working with the %{scl_name} Software
+Collection, use the scl utility to enable the scl environment.  See
+the scl(1) man page for usage.
+
+Examples:
+scl enable %{scl_name} 'command --arg'
+  Run a specific command with the argument --arg from within the
+  %{scl_name} Software Collection environment.
+
+scl enable %{scl_name} 'scala'
+  Run scala from the %{scl_name} Software Collection.
+
+scl enable %{scl_name} bash
+  Run an interactive shell with the %{scl_name} Software Collection
+  enabled.
+
+scl enable %{scl_name} 'man scala'
+  Show man pages for the scala command, which is a part of the
+  %{scl_name} Software Collection.
+
+Report any bugs to <http://bugzilla.redhat.com>.
