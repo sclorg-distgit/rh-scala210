@@ -8,7 +8,7 @@
 
 Name:       %scl_name
 Version:    1
-Release:    2%{?dist}
+Release:    3%{?dist}
 Summary:    Package that installs %scl
 
 License:    GPLv2+
@@ -49,6 +49,7 @@ to build %scl Software Collection.
 %package scldevel
 Summary:    Package shipping development files for %scl
 Requires:   %{name}-runtime = %{version}-%{release}
+Requires:   %{scl_java_common}-scldevel
 Requires:   java-devel-openjdk >= 1:1.7
 
 %description scldevel
@@ -200,6 +201,9 @@ install -m 755 -d %{buildroot}%{_datadir}/licenses
 %{_root_sysconfdir}/rpm/macros.%{scl_name_base}-scldevel
 
 %changelog
+* Mon Jan 16 2017 Mikolaj Izdebski <mizdebsk@redhat.com> - 1-3
+- Add missing requires on rh-java-common-scldevel
+
 * Mon Jan  9 2017 Mikolaj Izdebski <mizdebsk@redhat.com> - 1-2
 - Add requires on OpenJDK
 - Update README
